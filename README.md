@@ -1,5 +1,7 @@
 # Pezesha.com - Homepage Rebuild: Issues Found & Fixes
 
+**Live demo:** [pezesha-revamp.netlify.app](https://pezesha-revamp.netlify.app/)
+
 ---
 
 ## 1. Navbar/Hero Background Seam & Blob Mismatch
