@@ -1,7 +1,5 @@
 # Pezesha.com - Homepage Rebuild: Issues Found & Fixes
 
-![Optimized Hero Dashboard](public/hero-dashboard.jpg)
-
 ---
 
 ## 1. Navbar/Hero Background Seam & Blob Mismatch
@@ -10,7 +8,7 @@
 |---|---|
 | **Location** | Sticky navbar + hero section (`.navbar`, `.hero`) |
 | **Root Cause** | Navbar had hard white (`#fff`) background while hero used cream (`#f8faf5`). As a sticky element, the navbar appeared to float against a different-colored hero, creating a visible horizontal seam. The background blob (`hero-blob--1`) was also positioned incorrectly, clipping against the navbar. |
-| **Fix** | Set `.navbar` background to transparent so the cream from `.page-top` flows through. Changed `.page-top` from `overflow:clip` to allow blobs to bleed upward behind navbar. Positioned `hero-blob--1` at `top:-280px` so it sits behind the transparent navbar area. The inner `.navbar-inner` keeps its white card style with `border-radius:16px` and box-shadow. |
+| **Fix** | Set `.navbar` background to transparent so the cream from `.page-top` flows through. Changed `.page-top` from `overflow:clip` to allow blobs to bleed upward behind navbar. Positioned `hero-blob--1` at `top:-280px` so it sits behind the transparent navbar area. The inner `.navbar-inner` keeps its white card style with `border-radius:16px` and box-shadow. Hero dashboard image optimized from PNG to JPG with lazy loading. |
 | **Before** | White navbar bar visible against cream hero; blob clipped awkwardly at the top. |
 | **After** | Seamless cream background from hero through navbar. Blob bleeds naturally behind the floating white card. |
 
@@ -106,7 +104,7 @@
 |---|---|
 | **Location** | Multiple sections at 375px viewport |
 | **Root Cause** | Various sections lacked responsive constraints: grids with too many columns, images without max-width, missing `box-sizing: border-box`, and flex layouts without wrap caused content to overflow the viewport horizontally on mobile. |
-| **Fix** | Applied comprehensive responsive breakpoints across all sections. Key fixes: global `box-sizing: border-box`, global `img { max-width: 100%; height: auto; display: block }`, responsive grid columns, flex-wrap on button groups and tab bars, `overflow: hidden` on problematic parents. |
+| **Fix** | Applied comprehensive responsive breakpoints across all sections. Key fixes: global `box-sizing: border-box`, global `img { max-width: 100%; height: auto; display: block }`, responsive grid columns, flex-wrap on button groups and tab bars, `overflow: hidden` on problematic parents. Added `loading="lazy"` on all images for deferred offscreen loading and converted raster hero image to optimized JPG. |
 | **Before** | Horizontal scrollbar visible at 375px; content bleeding past viewport edges. |
 | **After** | All content fits within viewport at 375px; no horizontal overflow. |
 
