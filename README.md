@@ -1,5 +1,7 @@
 # Pezesha.com - Homepage Rebuild: Issues Found & Fixes
 
+![Optimized Hero Dashboard](public/hero-dashboard.jpg)
+
 ---
 
 ## 1. Navbar/Hero Background Seam & Blob Mismatch
